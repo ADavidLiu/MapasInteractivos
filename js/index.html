@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mapas Interactivos</title>
+        <style>
+            html,
+            body {
+                padding: 0;
+                margin: 0;
+                background-color: #5aa7ff;
+            }
+            img {
+                height: 80vh;
+                width: auto;
+                display: block;
+                margin: 0 auto;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            iframe {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                pointer-events: none;
+                width: 100vw;
+                height: 100vh;
+                transform: rotateZ(90deg);
+            }
+            .info {
+                position: fixed;
+                z-index: 999;
+                top: 1rem;
+                right: 1rem;
+                background-color: white;
+                padding: 3rem;
+            }
+            .info ul {
+                list-style: none;
+                padding: 0;
+            }
+            html, body {
+                margin: 0;
+                height: 100%
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="info">
+            <ul>
+                <li class="info__aceleracion">Aceleración: <span></span></li>
+                <br><br>
+                <li class="info__orientacion">Orientación: <span></span></li>
+            </ul>
+        </div>
+        <iframe src="https://giphy.com/embed/u01ioCe6G8URG" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <img src="plane.png" alt="Avión">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
+
+</html>
